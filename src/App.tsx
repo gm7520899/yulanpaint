@@ -343,7 +343,7 @@ export default function App() {
             alt="Hero Background" 
             className="w-full h-full object-cover opacity-90 contrast-100 brightness-[0.85] saturate-0"
             onError={(e) => {
-              (e.target as HTMLImageElement).style.display = 'none';
+              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80";
             }}
           />
           <div className="absolute inset-0 bg-brand-bg/70 z-1" />
@@ -592,7 +592,14 @@ export default function App() {
                       alt={product.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).style.opacity = '0';
+                        const target = e.target as HTMLImageElement;
+                        // 如果本地图片加载失败，自动切换到符合德系极简风格的备用图
+                        const fallbacks = [
+                          "https://images.unsplash.com/photo-1615873968403-89e068628265?auto=format&fit=crop&w=800&q=80", // 细腻墙面肌理
+                          "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&w=800&q=80", // 柔和室内光影
+                          "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"  // 抽象极简几何
+                        ];
+                        target.src = fallbacks[idx];
                       }}
                     />
                     <div className="absolute inset-0 bg-brand-950/0 group-hover:bg-brand-950/5 transition-colors z-10" />
