@@ -178,7 +178,7 @@ export default function App() {
       tagline: "Foundation Base",
       desc: "融合高遮盖因子，专为重塑墙面基底色彩设计。有效遮盖基层瑕疵与色差，提供卓越的封闭性能，为后续面漆显色提供均匀、通透的“初肌”底色。",
       features: ["卓越遮盖能力", "有效封闭碱性", "提升附着力"],
-      image: "/assets/images/primer-product.jpg",
+      image: "/assets/images/product_base.jpeg",
       labelTexture: "/assets/images/primer-label.jpg",
       specs: [
         { name: "树脂类型", value: "100% 自交联丙烯酸树脂乳液" },
@@ -199,7 +199,7 @@ export default function App() {
       tagline: "Velvet Topcoat",
       desc: "引入美国核心自交联涂料配方，核心 5-10° 柔光技术。触感细腻如脂，拥有卓越的遮盖力与 1784 种精准色效还原，为空间铺设如蛋壳般的溫润肤感。",
       features: ["5-10° 柔光技术", "触感细腻如脂", "卓越遮盖力"],
-      image: "/assets/images/eggshell-product.jpg",
+      image: "/assets/images/product_velvet.jpeg",
       labelTexture: "/assets/images/eggshell-label.jpg",
       specs: [
         { name: "树脂类型", value: "纯丙烯酸 / 聚氨酯树脂复合体系" },
@@ -221,7 +221,7 @@ export default function App() {
       tagline: "Shield Protect",
       desc: "专为厨卫空间、卫浴干区等高湿度环境设计。荷叶式自洁拒水，持久固色防霉，形成肉眼难见的极致拒水层。即使是酱油、番茄酱等粘稠污渍，亦能一抹即净。",
       features: ["荷叶式拒水", "持久固色防霉", "适用卫浴干区"],
-      image: "/assets/images/shield-product.jpg",
+      image: "/assets/images/product_shield.jpeg",
       labelTexture: "/assets/images/shield-label.jpg",
       specs: [
         { name: "树脂类型", value: "水性有机硅树脂乳液 (极致疏水)" },
