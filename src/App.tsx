@@ -341,12 +341,14 @@ export default function App() {
           <img 
             src="/assets/images/hero-bg.webp" 
             alt="Hero Background" 
-            className="w-full h-full object-cover opacity-90 contrast-100 brightness-[0.85] saturate-0"
+            className="w-full h-full object-cover opacity-90 contrast-[1.02] brightness-[0.95] saturate-[0.8]"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80";
+              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=2000&q=80";
             }}
           />
-          <div className="absolute inset-0 bg-brand-bg/70 z-1" />
+          <div className="absolute inset-0 bg-brand-bg/40 z-1" />
+          {/* Subtle noise texture to simulate paint grain */}
+          <div className="absolute inset-0 z-2 opacity-[0.15] mix-blend-overlay pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/p6.png')]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
@@ -593,16 +595,16 @@ export default function App() {
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        // 如果本地图片加载失败，自动切换到符合德系极简风格的备用图
                         const fallbacks = [
-                          "https://images.unsplash.com/photo-1615873968403-89e068628265?auto=format&fit=crop&w=800&q=80", // 细腻墙面肌理
-                          "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&w=800&q=80", // 柔和室内光影
-                          "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"  // 抽象极简几何
+                          "https://images.unsplash.com/photo-1615873968403-89e068628265?auto=format&fit=crop&w=800&q=80", // Primer/Base
+                          "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80", // Velvet
+                          "https://images.unsplash.com/photo-1518173835740-f5d14111d76a?auto=format&fit=crop&w=800&q=80"  // Shield
                         ];
                         target.src = fallbacks[idx];
                       }}
                     />
-                    <div className="absolute inset-0 bg-brand-950/0 group-hover:bg-brand-950/5 transition-colors z-10" />
+                    {/* Texture overlay for product cards */}
+                    <div className="absolute inset-0 z-10 opacity-10 mix-blend-multiply pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]" />
                   </div>
                   <div className="p-8 flex-grow flex flex-col">
                     <h4 className="serif text-xl text-brand-900 mb-1">{product.title}</h4>
@@ -664,8 +666,15 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-4 auto-rows-[250px] lg:auto-rows-[300px]">
             {/* Main Case */}
             <div className="lg:col-span-8 lg:row-span-2 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer">
-              <img src="/assets/images/case-living.webp" alt="Living Room Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"; }} />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
+              <img 
+                src="/assets/images/case-living.webp" 
+                alt="Living Room Case" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80"; }} 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-950/60 via-transparent to-transparent opacity-100" />
+              {/* Paint texture simulation */}
+              <div className="absolute inset-0 z-10 opacity-5 mix-blend-overlay pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/p6.png')]" />
               <div className="absolute bottom-10 left-10 text-white z-10 pr-10">
                 <span className="text-[10px] tracking-widest text-brand-gold uppercase font-bold mb-3 block">Premium Living Room</span>
                 <h3 className="text-3xl font-serif mb-2">客餐厅全案标杆</h3>
@@ -680,7 +689,7 @@ export default function App() {
 
             {/* Sub Case 1 */}
             <div className="lg:col-span-4 lg:row-span-1 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer">
-              <img src="/assets/images/case-bedroom.webp" alt="Bedroom Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
+              <img src="/assets/images/case-bedroom.webp" alt="Bedroom Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"; }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6 text-white z-10 pr-6">
                 <h3 className="text-xl font-serif mb-1">主卧艺术视觉点</h3>
@@ -694,7 +703,7 @@ export default function App() {
 
             {/* Sub Case 2 */}
             <div className="lg:col-span-4 lg:row-span-1 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer border border-brand-sep">
-              <img src="/assets/images/case-curtain.webp" alt="Curtain Paint Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
+              <img src="/assets/images/case-curtain.webp" alt="Curtain Paint Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"; }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6 text-white z-10 pr-6">
                 <h3 className="text-xl font-serif mb-1">材质冷暖共振</h3>
