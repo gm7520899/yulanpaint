@@ -178,8 +178,8 @@ export default function App() {
       tagline: "Foundation Base",
       desc: "融合高遮盖因子，专为重塑墙面基底色彩设计。有效遮盖基层瑕疵与色差，提供卓越的封闭性能，为后续面漆显色提供均匀、通透的“初肌”底色。",
       features: ["卓越遮盖能力", "有效封闭碱性", "提升附着力"],
-      image: "/assets/images/product_base.jpeg",
-      labelTexture: "/assets/images/primer-label.jpg",
+      image: "/assets/images/product_base.webp",
+      labelTexture: "/assets/images/primer-label.webp",
       specs: [
         { name: "树脂类型", value: "100% 自交联丙烯酸树脂乳液" },
         { name: "光泽度", value: "< 5% @ 60° (极致哑光)" },
@@ -199,8 +199,8 @@ export default function App() {
       tagline: "Velvet Topcoat",
       desc: "引入美国核心自交联涂料配方，核心 5-10° 柔光技术。触感细腻如脂，拥有卓越的遮盖力与 1784 种精准色效还原，为空间铺设如蛋壳般的溫润肤感。",
       features: ["5-10° 柔光技术", "触感细腻如脂", "卓越遮盖力"],
-      image: "/assets/images/product_velvet.jpeg",
-      labelTexture: "/assets/images/eggshell-label.jpg",
+      image: "/assets/images/product_velvet.webp",
+      labelTexture: "/assets/images/eggshell-label.webp",
       specs: [
         { name: "树脂类型", value: "纯丙烯酸 / 聚氨酯树脂复合体系" },
         { name: "耐洗刷次数", value: "20,000+ 次 (超强抗刮擦/耐刷洗)" },
@@ -221,8 +221,8 @@ export default function App() {
       tagline: "Shield Protect",
       desc: "专为厨卫空间、卫浴干区等高湿度环境设计。荷叶式自洁拒水，持久固色防霉，形成肉眼难见的极致拒水层。即使是酱油、番茄酱等粘稠污渍，亦能一抹即净。",
       features: ["荷叶式拒水", "持久固色防霉", "适用卫浴干区"],
-      image: "/assets/images/product_shield.jpeg",
-      labelTexture: "/assets/images/shield-label.jpg",
+      image: "/assets/images/product_shield.webp",
+      labelTexture: "/assets/images/shield-label.webp",
       specs: [
         { name: "树脂类型", value: "水性有机硅树脂乳液 (极致疏水)" },
         { name: "外观", value: "全透明保护层 (不改变面漆原色)" },
@@ -339,7 +339,7 @@ export default function App() {
       <section className="relative h-screen w-full flex items-center justify-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/images/hero-bg.jpeg" 
+            src="/assets/images/hero-bg.webp" 
             alt="Hero Background" 
             className="w-full h-full object-cover opacity-90 contrast-100 brightness-[0.85] saturate-0"
             onError={(e) => {
@@ -395,7 +395,7 @@ export default function App() {
             <FadeIn direction="right">
               <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden shadow-2xl">
                   <img 
-                    src="/assets/images/company-heritage.jpeg" 
+                    src="/assets/images/company-heritage.webp" 
                     alt="Wallcovering Expertise Heritage" 
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 opacity-100 contrast-100 saturate-100"
                     referrerPolicy="no-referrer"
@@ -588,7 +588,7 @@ export default function App() {
                       <span className={`text-4xl font-serif ${idx === 1 ? 'text-brand-gold' : 'text-brand-200'} opacity-40`}>{product.step}</span>
                     </div>
                     <img 
-                      src={`/assets/images/product_${idx === 0 ? 'base' : idx === 1 ? 'velvet' : 'shield'}.jpeg`}
+                      src={`/assets/images/product_${idx === 0 ? 'base' : idx === 1 ? 'velvet' : 'shield'}.webp`}
                       alt={product.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       onError={(e) => {
@@ -664,7 +664,7 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-4 auto-rows-[250px] lg:auto-rows-[300px]">
             {/* Main Case */}
             <div className="lg:col-span-8 lg:row-span-2 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer">
-              <img src="/assets/images/case-living.jpeg" alt="Living Room Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"; }} />
+              <img src="/assets/images/case-living.webp" alt="Living Room Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"; }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
               <div className="absolute bottom-10 left-10 text-white z-10 pr-10">
                 <span className="text-[10px] tracking-widest text-brand-gold uppercase font-bold mb-3 block">Premium Living Room</span>
@@ -680,7 +680,7 @@ export default function App() {
 
             {/* Sub Case 1 */}
             <div className="lg:col-span-4 lg:row-span-1 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer">
-              <img src="/assets/images/case-bedroom.jpeg" alt="Bedroom Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
+              <img src="/assets/images/case-bedroom.webp" alt="Bedroom Case" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6 text-white z-10 pr-6">
                 <h3 className="text-xl font-serif mb-1">主卧艺术视觉点</h3>
@@ -694,7 +694,7 @@ export default function App() {
 
             {/* Sub Case 2 */}
             <div className="lg:col-span-4 lg:row-span-1 relative group overflow-hidden rounded-[2px] shadow-sm cursor-pointer border border-brand-sep">
-              <img src="/assets/images/case-curtain.jpeg" alt="Curtain Paint Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
+              <img src="/assets/images/case-curtain.webp" alt="Curtain Paint Details" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"; }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-black/20 to-transparent opacity-80" />
               <div className="absolute bottom-6 left-6 text-white z-10 pr-6">
                 <h3 className="text-xl font-serif mb-1">材质冷暖共振</h3>
